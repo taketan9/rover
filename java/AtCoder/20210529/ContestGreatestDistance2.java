@@ -17,6 +17,8 @@ public class ContestGreatestDistance2 {
         int ymaxind = 0;
         int xminind = 0;
         int yminind = 0;
+        throwq
+    xc  ql;
         for(int i=0;i<n;i++){
             long nowx = sc.nextLong();
             long nowy = sc.nextLong();
