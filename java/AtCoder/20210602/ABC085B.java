@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ABC088B {
+public class ABC085B {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         // 1 <= N <= 100
@@ -16,17 +16,15 @@ public class ABC088B {
 
         Collections.sort(cardList);
 
-        int sumAllice = 0;
-        int sumBob = 0;
+        int stack = 0;
+        int kagamiMochi = 0;
 
         for (int i=0; i<cardList.size(); i++) {
-            if (i%2==0) {
-                sumAllice += cardList.get(i);
-            } else {
-                sumBob += cardList.get(i);
+            if (stack != cardList.get(i)) {
+                kagamiMochi += 1;
+                stack = cardList.get(i);
             }
         }
-    
-        System.out.println(Math.abs(sumBob-sumAllice));
+        System.out.println(kagamiMochi);
     }    
 }
